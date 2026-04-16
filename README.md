@@ -1,16 +1,32 @@
-# to_do_app
+# 📝 To-Do Flutter App
 
-A new Flutter project.
+A simple and clean To-Do application built using Flutter.
 
-## Getting Started
+## ✨ Features
+- Add, edit, delete tasks
+- Mark tasks as completed
+- Persistent storage using SharedPreferences
+- Clean and minimal UI
 
-This project is a starting point for a Flutter application.
+## 📱 Screenshots
 
-A few resources to get you started if this is your first Flutter project:
+### Welcome Screen
+![Welcome](assets/screenshots/home.png)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### To-Do Screen
+![Todo](assets/screenshots/todo.png)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 🚀 Tech Stack
+- Flutter
+- Dart
+- SharedPreferences
+
+## 📦 Installation
+
+```bash
+git clone https://github.com/your-username/your-repo-name.git
+cd your-repo-name
+flutter pub get
+flutter run
+
+---
