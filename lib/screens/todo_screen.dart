@@ -303,17 +303,22 @@ class _TodoScreenState extends State<TodoScreen> {
               ),
             ),
 
-            const SizedBox(height: 10),
+            const SizedBox(height: 8),
+            Divider(height: 1, thickness: 0.6, color: Colors.grey[300]),
+            const SizedBox(height: 8),
 
             // LIST
             Expanded(
               child: ListView(
-                padding: const EdgeInsets.symmetric(horizontal: 16),
+                padding: const EdgeInsets.symmetric(horizontal: 12),
                 children: [
                   if (pending.isNotEmpty) ...[
-                    const Text(
-                      "Pending Tasks",
-                      style: TextStyle(fontWeight: FontWeight.bold),
+                    const Padding(
+                      padding: EdgeInsets.symmetric(vertical: 4),
+                      child: Text(
+                        "Pending Tasks",
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
                     ),
                     ...pending.map((task) {
                       int index = tasks.indexOf(task);
@@ -330,10 +335,13 @@ class _TodoScreenState extends State<TodoScreen> {
                     }),
                   ],
                   if (completed.isNotEmpty) ...[
-                    const SizedBox(height: 10),
-                    const Text(
-                      "Completed",
-                      style: TextStyle(fontWeight: FontWeight.bold),
+                    const SizedBox(height: 15),
+                    const Padding(
+                      padding: EdgeInsets.symmetric(vertical: 4),
+                      child: Text(
+                        "Completed",
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
                     ),
                     ...completed.map((task) {
                       int index = tasks.indexOf(task);
@@ -341,7 +349,7 @@ class _TodoScreenState extends State<TodoScreen> {
                         children: [
                           buildCard(task, index),
                           Divider(
-                            height: 1,
+                            height: 0,
                             thickness: 0.5,
                             color: Colors.grey[300],
                           ),
@@ -353,6 +361,7 @@ class _TodoScreenState extends State<TodoScreen> {
               ),
             ),
 
+            Divider(height: 1, thickness: 0.6, color: Colors.grey[300]),
             // BUTTONS
             Padding(
               padding: const EdgeInsets.all(16),
