@@ -146,10 +146,11 @@ class _TodoScreenState extends State<TodoScreen> {
         trailing: Row(
           mainAxisSize: MainAxisSize.min,
           children: [
-            IconButton(
-              icon: const Icon(Icons.edit, size: 24, color: iconColor),
-              onPressed: () => editTask(index),
-            ),
+            if (!task.isCompleted)
+              IconButton(
+                icon: const Icon(Icons.edit, size: 24, color: iconColor),
+                onPressed: () => editTask(index),
+              ),
 
             IconButton(
               onPressed: () => deleteTask(index),
@@ -159,7 +160,6 @@ class _TodoScreenState extends State<TodoScreen> {
                 child: Stack(
                   alignment: Alignment.center,
                   children: [
-                    // body
                     Positioned(
                       bottom: 0,
                       child: Container(
@@ -171,8 +171,6 @@ class _TodoScreenState extends State<TodoScreen> {
                         ),
                       ),
                     ),
-
-                    // lines
                     Positioned(
                       bottom: 4,
                       left: 7,
@@ -191,8 +189,6 @@ class _TodoScreenState extends State<TodoScreen> {
                         color: Colors.white,
                       ),
                     ),
-
-                    // lid
                     Positioned(
                       top: 5,
                       child: Container(
@@ -204,8 +200,6 @@ class _TodoScreenState extends State<TodoScreen> {
                         ),
                       ),
                     ),
-
-                    // handle
                     Positioned(
                       top: 2,
                       child: Container(
